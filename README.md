@@ -15,7 +15,7 @@ Prompt Injection can be applied in different ways, as we examined, including dir
 
 ### **TESTED TECHNIQUES**
 - **Direct Prompting**: consists of asking to the model a simple question and then adding a new request, which specifies to ignore the previous input and fulfill a new request instead;
-- **Obfuscation / Token smuggling**: consists of splitting the input into multiple requests, and then getting the LLM to combine and execute them. The initial requests are provided in such a way the model will provide a potentially malicious answer without triggering the filters;
+- **Obfuscation / Token smuggling**: consists of splitting the input into multiple requests, and then getting the LLM to combine and execute them. The initial requests are provided in such a way the model will return a potentially malicious answer without triggering the filters;
 - **Virtualization**: involves the creation of a scenario in which the model has to impersonate an individual in order to bypass the filters;
 
 For every techniques, both simple questions or illegal and offensive requests have been tested, in order to evaluate the strength of the filters and check how easy is to bypass them.
