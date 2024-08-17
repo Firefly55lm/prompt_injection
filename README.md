@@ -18,18 +18,18 @@ Prompt Injection can be applied in different ways, as we examined, including dir
 - **Obfuscation / Token smuggling**: consists of splitting the input into multiple requests, and then getting the LLM to combine and execute them. The initial requests are provided in such a way the model will return a potentially malicious answer without triggering the filters;
 - **Virtualization**: involves the creation of a scenario in which the model has to impersonate an individual in order to bypass the filters;
 
-For every techniques, both simple questions or illegal and offensive requests have been tested, in order to evaluate the strength of the filters and check how easy is to bypass them.
+For every technique, both simple questions and illegal and offensive requests have been tested, in order to evaluate the strength of the filters and check how easy is to bypass them.
 
-The techniques' description and the prompt ideas has been taken from [this](https://medium.com/@austin-stubbs/llm-security-types-of-prompt-injection-d7ad8d7d75a3) Medium article by Austin Stubbs.
+The techniques' description and the prompt ideas have been taken from [this](https://medium.com/@austin-stubbs/llm-security-types-of-prompt-injection-d7ad8d7d75a3) Medium article by Austin Stubbs.
 
 
 ### **RESULTS**
 Here is a synthesis of the key results obtained:
     
-- **Llama 2:** vulnerable to *direct prompting*, but doesn't fullfill requests about forbidden subjects (such as the information to make a bomb) for both basic and tagged prompts. Only tested on direct prompting.
-- **Llama 3:** vulnerable to *direct prompting*, returning the same behaviour as its previous version Llama 2; robust to *obfuscation* when the request is clearly illegal but generating strongly offensive answers for the second prompt. Vulnerable to virtualization also.
+- **Llama 2:** vulnerable to *direct prompting*, but doesn't fullfill requests about forbidden subjects (such as the information to make a bomb) for both basic and tagged prompts; only tested on direct prompting.
+- **Llama 3:** vulnerable to *direct prompting*, returning the same behaviour as its previous version Llama 2; robust to *obfuscation* when the request is clearly illegal but generating strongly offensive answers for the second prompt; vulnerable to virtualization also.
 - **Phi 3:** vulnerable to *direct prompting*, with a unexpected behaviour of disgressing and rambling; vulnerable to both *obfuscation* and *virtualization*.
-- **Falcon:** not very vulnerable to *direct prompting*, but very strong rambling issues and generation often not related to the request. Only tested on direct prompting.
+- **Falcon:** not very vulnerable to *direct prompting*, but very strong rambling issues and generation often not related to the request; only tested on direct prompting.
 - **Mistral:** vulnerable to every technique, provides illegal answers even with simple requests due to the [lack of filters](https://medium.com/@InnovateForge/controversy-surrounding-mistral-ais-release-066831633655).
 - **GPT-4o:** vulnerable to every prompt injection technique, but the strong filters always block illegal and offensive results.
 
