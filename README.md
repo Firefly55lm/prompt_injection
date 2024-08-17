@@ -1,6 +1,6 @@
 # PROMPT INJECTION TECHNIQUES
 
-The purpose of this repository is to explore an important and malevolent technique related to Large Language Models: Prompt Injection.
+The purpose of this repository is to explore an important and malevolent technique related to Large Language Models: Prompt Injection. According with [csoonline.com](https://www.csoonline.com/article/1294996/top-4-llm-threats-to-the-enterprise.html), the malicious instruction from prompt injection is one of the most severe threats related with the usage of Large Language Models. 
 The notebook is available in the main branch of the repository and at [this Colab link](https://colab.research.google.com/drive/1c5Xal5Kkh2bRqXC0khgPqh9moF7Atx4P?usp=sharing).
 
 In the notebook, we studied the output and vulnerabilities of several models concerning this technique, specifically focusing on:
